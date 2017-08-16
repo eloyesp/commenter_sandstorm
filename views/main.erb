@@ -1,0 +1,17 @@
+<h2>Tasks</h2>
+
+<ol>
+  <% Task.all.to_a.each do |task| %>
+    <h3><%= task.name %></h3>
+    <p><%= task.description %></p>
+  <% end %>
+</ol>
+
+
+<h2>Add task</h2>
+
+<form method="POST">
+  <label>Name: <input name="name" required></label>
+  <label>Description: <textarea name="description"></textarea></label>
+  <button>Add</button>
+</form>
